@@ -33,7 +33,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class D3Test {
+public class D3Tests {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
@@ -215,7 +215,7 @@ public class D3Test {
 
   @Test
   public void tEST3CATALOG() {
-    driver.get("https://cs1632.appspot.com");
+    driver.get("http://localhost:8080");
     driver.findElement(By.linkText("Catalog")).click();
     {
       WebElement element = driver.findElement(By.cssSelector("ol li:nth-child(1) img"));
@@ -240,7 +240,7 @@ public class D3Test {
  
   @Test
   public void tEST4LISTING() {
-    driver.get("https://cs1632.appspot.com");
+    driver.get("http://localhost:8080");
     driver.findElement(By.linkText("Catalog")).click();
     assertThat(driver.findElement(By.id("cat-id1")).getText(), is("ID 1. Jennyanydots"));
     assertThat(driver.findElement(By.id("cat-id2")).getText(), is("ID 2. Old Deuteronomy"));
